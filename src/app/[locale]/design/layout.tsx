@@ -1,3 +1,5 @@
+import './design.css';
+
 import { notFound } from 'next/navigation';
 import { createTranslator } from 'next-intl';
 import Header from '@/app/components/header';
@@ -21,7 +23,7 @@ export async function generateMetadata({ params: { locale } }: RootLayout) {
 
 export default async function RootLayout({ children }: RootLayout) {
   return (
-    <div>
+    <div className="h-screen">
       <Header></Header>
       {children}
     </div>
