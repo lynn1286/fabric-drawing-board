@@ -10,6 +10,11 @@
     "try": "Try it again"
   },
   "Design": {
-    "title": "Design"
+    "title": "Design",
+    "header": {
+      "preview": "Preview",
+      "clear": "Clear",
+      "save": "Save"
+    }
   }
 }

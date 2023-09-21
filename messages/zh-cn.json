@@ -10,6 +10,11 @@
     "try": "重试"
   },
   "Design": {
-    "title": "设计"
+    "title": "设计",
+    "header": {
+      "preview": "预览",
+      "clear": "清空",
+      "save": "保存"
+    }
   }
 }

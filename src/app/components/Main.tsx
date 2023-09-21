@@ -5,10 +5,10 @@ import { fabric } from 'fabric';
 import Editor from '@/core';
 import WorkspacePlugin from '@/core/plugin/WorkspacePlugin';
 
-const canvasEditor = new Editor();
-
 const Main = () => {
   useEffect(() => {
+    const canvasEditor = new Editor();
+
     // 初始化fabric
     const canvas = new fabric.Canvas('canvas', {
       fireRightClick: true, // 启用右键，button的数字为3
