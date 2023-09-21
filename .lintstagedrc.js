@@ -2,8 +2,7 @@ module.exports = {
   '**/*.(ts|tsx)': () => 'npx tsc --noEmit',
 
   '**/*.(ts|tsx|js|jsx)': (filenames) => [
-    `next lint --fix --dir src`,
-    `npx eslint --fix ${filenames.join(' ')}`,
+    `pnpm lint`,
     `npx prettier --write ${filenames.join(' ')}`,
   ],
 
