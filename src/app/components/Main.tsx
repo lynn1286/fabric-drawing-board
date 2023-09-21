@@ -2,6 +2,10 @@
 
 import { useEffect } from 'react';
 import { fabric } from 'fabric';
+import Editor from '@/core';
+import WorkspacePlugin from '@/core/plugin/WorkspacePlugin';
+
+const canvasEditor = new Editor();
 
 const Main = () => {
   useEffect(() => {
@@ -11,14 +15,16 @@ const Main = () => {
       stopContextMenu: true, // 禁止默认右键菜单
       controlsAboveOverlay: true, // 超出clipPath后仍然展示控制条
     });
-
-    console.log('🚀 ~  : Main -> canvas', canvas);
+    // 初始化编辑器
+    canvasEditor.init(canvas);
+    // 通过插件的形式拓展功能
+    canvasEditor.use(WorkspacePlugin as unknown as IPluginClass);
   }, []);
 
   return (
-    <div className="flex-1">
+    <div className="flex-1 bg-[#f1f1f1]" id="workspace">
       <div className="relative h-full w-full">
-        <div className="absolute h-full w-full shadow-inside-shadow"></div>
+        <div className="pointer-events-none absolute z-[2] h-full w-full shadow-inside-shadow"></div>
         <canvas id="canvas"></canvas>
       </div>
     </div>

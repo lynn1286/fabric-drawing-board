@@ -3,6 +3,7 @@ const nextConfig = {
   experimental: {
     serverActions: true,
   },
+  reactStrictMode: false, // 关掉react严格模式下的渲染2次的问题
   webpack: (config) => {
     config.externals = [
       ...config.externals,
