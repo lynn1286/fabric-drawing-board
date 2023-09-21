@@ -2,11 +2,14 @@
   "Notfound": {
     "title": "页面不存在."
   },
-  "Metadata": {
+  "Home": {
     "title": "立即定制"
   },
   "Error": {
     "title": "内部服务器错误.",
     "try": "重试"
+  },
+  "Design": {
+    "title": "设计"
   }
 }

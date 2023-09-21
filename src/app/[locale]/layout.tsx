@@ -2,29 +2,24 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, createTranslator } from 'next-intl';
 import { inter, roboto_mono } from '../utils/fonts';
 
-type Props = {
-  children: React.ReactNode;
-  params: { locale: string };
-};
-
 async function getMessages(locale: string) {
   try {
-    return (await import(`../../../messages/${locale}.json`)).default;
+    return (await import(`/messages/${locale}.json`)).default;
   } catch (error) {
     return notFound();
   }
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
+export async function generateMetadata({ params: { locale } }: RootLayout) {
   const messages = await getMessages(locale);
   const t = createTranslator({ locale, messages });
 
   return {
-    title: t('Metadata.title'),
+    title: t('Home.title'),
   };
 }
 
-export default async function RootLayout({ children, params: { locale } }: Props) {
+export default async function RootLayout({ children, params: { locale } }: RootLayout) {
   const messages = await getMessages(locale);
 
   return (

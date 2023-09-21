@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 
-const Home = async () => {
+const Home = () => {
   const t = useTranslations('Error');
 
   return <div>{t('title')}</div>;

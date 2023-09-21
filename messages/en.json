@@ -2,11 +2,14 @@
   "Notfound": {
     "title": "Page not found."
   },
-  "Metadata": {
+  "Home": {
     "title": "Customize now"
   },
   "Error": {
     "title": "Internal server error.",
     "try": "Try it again"
+  },
+  "Design": {
+    "title": "Design"
   }
 }
