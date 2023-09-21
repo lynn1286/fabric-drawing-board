@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import notFound from '/public/notFound.svg';
+import notFound from '@/public/notFound.svg';
 
 export default function NotFound() {
   const t = useTranslations('Notfound');

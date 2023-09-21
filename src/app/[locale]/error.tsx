@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-
-import InternalServerError from '/public/InternalServerError.svg';
-import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+
+import InternalServerError from '@/public/InternalServerError.svg';
 
 interface IError {
   error: Error & { digest?: string };

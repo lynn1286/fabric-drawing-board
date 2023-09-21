@@ -1,14 +1,15 @@
 'use client';
 
+import { useTransition } from 'react';
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Button, Dropdown, Space, message } from 'antd';
 import clsx from 'clsx';
 import Image from 'next/image';
-import Logo from '/public/next.svg';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next-intl/client';
-import { useTransition } from 'react';
+
+import Logo from '@/public/next.svg';
 
 const currentLocale: Record<string, string> = {
   en: 'En',
